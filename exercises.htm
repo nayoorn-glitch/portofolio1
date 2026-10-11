@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports | التمارين والتغذية</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+header {
+    background: #1b1b1b;
+    border-bottom: 2px solid #ff941f;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    color: #ff941f;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+header a:hover {
+    color: #ff941f;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+    background:
+      linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.85)),
+      url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80")
+      center/cover;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    color: #ff941f;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #eee;
+}
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 35px auto;
+}
+
+h2 {
+    color: #ff941f;
+    margin-bottom: 20px;
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #202020;
+    border: 1px solid #393939;
+    border-radius: 13px;
+    padding: 22px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff941f;
+}
+
+.card h3 {
+    color: #ffb45c;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    padding-right: 20px;
+}
+
+.card li {
+    margin: 5px 0;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 15px;
+    border-right: 4px solid #ff941f;
+    background: #202020;
+    color: #ddd;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    margin: 20px 0 35px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: #202020;
+}
+
+th, td {
+    padding: 13px;
+    text-align: center;
+    border: 1px solid #414141;
+}
+
+th {
+    background: #ff941f;
+    color: #111;
+}
+
+tr:nth-child(even) {
+    background: #292929;
+}
+
+.water-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.water-item {
+    background: #202020;
+    border-radius: 10px;
+    padding: 16px 10px;
+    text-align: center;
+    border: 1px solid #383838;
+}
+
+.water-item span {
+    display: block;
+    font-size: 25px;
+}
+
+.water-item strong {
+    color: #ffb45c;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 35px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 9px;
+    background: #ff941f;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+footer {
+    background: #1b1b1b;
+    color: #aaa;
+    text-align: center;
+    padding: 22px;
+}
+
+@media(max-width: 850px) {
+    .exercise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .water-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 520px) {
+    .exercise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SPORTS ZONE ⚡</div>
+    <nav>
+        <a href="home.html">الرئيسية</a>
+        <a href="exercises.html">التمارين</a>
+        <a href="index.html">تسجيل الخروج</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>تمارين رياضية لصحة الجسم 💪</h1>
+    <p>خطة متكاملة للحركة والتدريب والتغذية والراحة.</p>
+</section>
+
+<main class="container">
+
+    <h2>🏋️ تمارين عضلات الجسم</h2>
+
+    <div class="exercise-grid">
+
+        <section class="card">
+            <h3>💪 تمارين الصدر</h3>
+            <ul>
+                <li>Push-ups — الضغط.</li>
+                <li>Incline Push-ups — الضغط المائل.</li>
+                <li>Knee Push-ups — الضغط على الركبتين.</li>
+                <li>Chest Press — دفع الصدر بالأوزان.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🦾 تمارين الظهر</h3>
+            <ul>
+                <li>Bird Dog — تمرين التوازن.</li>
+                <li>Superman — رفع الذراعين والرجلين.</li>
+                <li>Resistance Band Row — سحب المطاط.</li>
+                <li>Lat Pulldown — سحب أمامي بالجهاز.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🏋️ تمارين الكتف</h3>
+            <ul>
+                <li>Arm Circles — دوران الذراعين.</li>
+                <li>Shoulder Press — ضغط الكتف.</li>
+                <li>Lateral Raises — رفع جانبي.</li>
+                <li>Wall Slides — انزلاق الذراع على الحائط.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>💪 تمارين الذراعين</h3>
+            <ul>
+                <li>Biceps Curls — ثني الذراع.</li>
+                <li>Hammer Curls — ثني قبضة المطرقة.</li>
+                <li>Triceps Extensions — مد العضلة الخلفية.</li>
+                <li>Wall Push-ups — ضغط على الحائط.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🔥 تمارين البطن</h3>
+            <ul>
+                <li>Plank — الثبات.</li>
+                <li>Dead Bug — تمرين الحشرة الميتة.</li>
+                <li>Crunches — تمرين البطن الجزئي.</li>
+                <li>Reverse Crunches — رفع الحوض والبطن.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🦵 تمارين الرجلين</h3>
+            <ul>
+                <li>Squats — القرفصاء.</li>
+                <li>Lunges — الاندفاع.</li>
+                <li>Glute Bridges — رفع الحوض.</li>
+                <li>Calf Raises — رفع الكعبين.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🏃 تمارين الكارديو</h3>
+            <ul>
+                <li>Walking — المشي السريع.</li>
+                <li>Jogging — الجري الخفيف.</li>
+                <li>Cycling — ركوب الدراجة.</li>
+                <li>Marching in Place — المشي في المكان.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>🧘 تمارين المرونة</h3>
+            <ul>
+                <li>Hamstring Stretch — إطالة خلف الفخذ.</li>
+                <li>Calf Stretch — إطالة السمانة.</li>
+                <li>Chest Stretch — إطالة الصدر.</li>
+                <li>Gentle Neck Stretch — إطالة الرقبة بلطف.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>⚖️ التوازن والثبات</h3>
+            <ul>
+                <li>Single-Leg Stand — الوقوف على رجل واحدة.</li>
+                <li>Heel-to-Toe Walk — المشي كعبًا أمام أصابع القدم.</li>
+                <li>Bird Dog — توازن الذراع والرجل.</li>
+                <li>Easy Yoga — يوغا خفيفة.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <div class="note">
+        <strong>مهم:</strong> دي مكتبة تمارين وليست خطة لتنفيذها كلها في يوم واحد.
+        ابدأ بتمارين مناسبة لمستواك، وسخّن جسمك 5–10 دقائق،
+        وتوقف عند الشعور بألم حاد أو دوخة. استخدم أوزانًا مناسبة
+        وتعلّم الأداء الصحيح قبل زيادة الحمل.
+    </div>
+
+    <h2 style="margin-top:40px">📅 جدول التدريبات الأسبوعي</h2>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>اليوم</th>
+                    <th>التدريب</th>
+                    <th>المدة المقترحة</th>
+                    <th>ملاحظات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>السبت</td>
+                    <td>صدر وذراعان</td>
+                    <td>20–35 دقيقة</td>
+                    <td>ابدأ بوزن خفيف</td>
+                </tr>
+                <tr>
+                    <td>الأحد</td>
+                    <td>مشي سريع وكارديو</td>
+                    <td>20–30 دقيقة</td>
+                    <td>حسب قدرتك</td>
+                </tr>
+                <tr>
+                    <td>الاثنين</td>
+                    <td>ظهر وكتف</td>
+                    <td>20–35 دقيقة</td>
+                    <td>اهتم بوضعية الظهر</td>
+                </tr>
+                <tr>
+                    <td>الثلاثاء</td>
+                    <td>راحة أو مشي خفيف</td>
+                    <td>10–20 دقيقة</td>
+                    <td>استشفاء الجسم</td>
+                </tr>
+                <tr>
+                    <td>الأربعاء</td>
+                    <td>رجلان وبطن</td>
+                    <td>20–35 دقيقة</td>
+                    <td>ابدأ دون إجهاد</td>
+                </tr>
+                <tr>
+                    <td>الخميس</td>
+                    <td>كارديو ومرونة</td>
+                    <td>20–30 دقيقة</td>
+                    <td>شدة متوسطة أو خفيفة</td>
+                </tr>
+                <tr>
+                    <td>الجمعة</td>
+                    <td>راحة</td>
+                    <td>حسب الحاجة</td>
+                    <td>نوم واستشفاء</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>🍎 جدول يومي للأكل الصحي</h2>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>الوقت</th>
+                    <th>الوجبة</th>
+                    <th>أمثلة مقترحة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7:00 صباحًا</td>
+                    <td>الإفطار</td>
+                    <td>بيض أو فول، خبز، وخضروات</td>
+                </tr>
+                <tr>
+                    <td>10:00 صباحًا</td>
+                    <td>وجبة خفيفة</td>
+                    <td>فاكهة أو زبادي</td>
+                </tr>
+                <tr>
+                    <td>1:00 ظهرًا</td>
+                    <td>الغداء</td>
+                    <td>أرز أو بطاطس، دجاج أو عدس، وسلطة</td>
+                </tr>
+                <tr>
+                    <td>قبل التمرين</td>
+                    <td>وجبة خفيفة عند الحاجة</td>
+                    <td>موزة أو شوفان</td>
+                </tr>
+                <tr>
+                    <td>بعد التمرين</td>
+                    <td>وجبة متوازنة</td>
+                    <td>مصدر بروتين وكربوهيدرات</td>
+                </tr>
+                <tr>
+                    <td>7:00 مساءً</td>
+                    <td>العشاء</td>
+                    <td>زبادي أو جبنة أو فول مع خبز وخضروات</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>💧 تذكير بشرب المياه</h2>
+
+    <div class="water-list">
+        <div class="water-item">
+            <span>🌅</span>
+            <strong>الصباح</strong>
+            <p>اشرب عند الاستيقاظ</p>
+        </div>
+        <div class="water-item">
+            <span>☀️</span>
+            <strong>منتصف اليوم</strong>
+            <p>اشرب مع الوجبات</p>
+        </div>
+        <div class="water-item">
+            <span>🏃</span>
+            <strong>وقت التمرين</strong>
+            <p>رشفات منتظمة</p>
+        </div>
+        <div class="water-item">
+            <span>🌙</span>
+            <strong>المساء</strong>
+            <p>حسب احتياجك</p>
+        </div>
+    </div>
+
+    <div class="note">
+        احتياج المياه والطعام يختلف من شخص لآخر حسب العمر والوزن
+        والنشاط والطقس والحالة الصحية. اشرب بانتظام وفق احتياجك،
+        ولا تجبر نفسك على كميات كبيرة. هذه أمثلة عامة وليست نظامًا
+        غذائيًا شخصيًا.
+    </div>
+
+    <div class="buttons">
+        <a class="btn" href="home.html">← العودة للرئيسية</a>
+        <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            ↑ العودة للأعلى
+        </button>
+    </div>
+
+</main>
+
+<footer>
+    SPORTS ZONE © 2026 — تمرّن بذكاء، واهتم بصحتك
+</footer>
+
+</body>
+</html>

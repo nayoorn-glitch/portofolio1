@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports | الصفحة الرئيسية</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px 6%;
+    background: #1a1a1a;
+    border-bottom: 2px solid #ff941f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #ff941f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+header a:hover {
+    color: #ff941f;
+}
+
+.hero {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    padding: 50px 7%;
+    background:
+      linear-gradient(90deg, rgba(0,0,0,.45), #101010),
+      url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+}
+
+.welcome {
+    max-width: 650px;
+}
+
+.welcome h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    margin-bottom: 18px;
+}
+
+.welcome h1 span {
+    color: #ff941f;
+}
+
+.welcome p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 25px;
+    padding: 35px 5%;
+}
+
+.section-title {
+    color: #ff941f;
+    margin-bottom: 20px;
+}
+
+.ads {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.ad {
+    overflow: hidden;
+    border-radius: 14px;
+    background: #222;
+    border: 1px solid #393939;
+    animation: enterRight .8s ease both;
+}
+
+.ad:nth-child(2) { animation-delay: .2s; }
+.ad:nth-child(3) { animation-delay: .4s; }
+.ad:nth-child(4) { animation-delay: .6s; }
+
+.ad img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.ad-info {
+    padding: 18px;
+}
+
+.ad h3 {
+    color: #ff941f;
+    margin-bottom: 10px;
+}
+
+.ad p {
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.sidebar {
+    background: #1d1d1d;
+    border: 1px solid #383838;
+    border-radius: 15px;
+    padding: 22px;
+    align-self: start;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.sidebar p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.main-button, .logout {
+    display: block;
+    width: 100%;
+    padding: 14px 10px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main-button {
+    background: #ff941f;
+    color: #111;
+}
+
+.main-button:hover {
+    background: white;
+}
+
+.logout {
+    background: #333;
+    color: white;
+}
+
+.logout:hover {
+    background: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    border-top: 1px solid #333;
+}
+
+@keyframes enterRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@media(max-width: 760px) {
+    .content {
+        grid-template-columns: 1fr;
+        padding: 25px 4%;
+    }
+
+    .sidebar {
+        grid-row: 1;
+    }
+
+    .ads {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 35px 5%;
+    }
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ad img {
+        height: 210px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SPORTS ZONE ⚡</div>
+    <nav>
+        <a href="home.html">الرئيسية</a>
+        <a href="exercises.htm">التمارين</a>
+        <a href="index.html">تسجيل الخروج</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="welcome">
+        <h1>أهلاً بيك يا <span id="visitor">بطل</span> 💪</h1>
+        <p>
+            أهلاً بك في عالم الرياضة والصحة.
+            هنا هتتعلم إزاي تطور لياقتك، وتنظم تدريباتك،
+            وتهتم بأكلك وشرب المياه كل يوم.
+        </p>
+    </div>
+</section>
+
+<div class="content">
+
+    <main>
+        <h2 class="section-title">🔥 أحدث الإعلانات الرياضية</h2>
+
+        <div class="ads">
+            <article class="ad">
+                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="تدريبات القوة">
+                <div class="ad-info">
+                    <h3>تحدي القوة</h3>
+                    <p>ابدأ بالتدريج، وحافظ على أسلوب أداء صحيح أثناء التمرين.</p>
+                </div>
+            </article>
+
+            <article class="ad">
+                <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" alt="الجري واللياقة">
+                <div class="ad-info">
+                    <h3>الجري واللياقة</h3>
+                    <p>خصص وقتًا للحركة يوميًا، وزوّد المدة حسب قدرتك.</p>
+                </div>
+            </article>
+
+            <article class="ad">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="تمارين الجيم">
+                <div class="ad-info">
+                    <h3>خطة الجيم</h3>
+                    <p>نظّم أيام التمرين والراحة لتحقيق تقدم تدريجي.</p>
+                </div>
+            </article>
+
+            <article class="ad">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="وجبات صحية">
+                <div class="ad-info">
+                    <h3>التغذية الصحية</h3>
+                    <p>نوّع وجباتك بين الخضروات والفاكهة والبروتين والحبوب.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <h2>🏋️ صحتك أهم</h2>
+        <p>
+            اكتشف مجموعة من التمارين لمختلف عضلات الجسم،
+            مع جدول أسبوعي للتدريب والمياه والوجبات.
+        </p>
+
+        <a class="main-button" href="exercises.htm">
+            تمارين رياضية لصحة الجسم
+        </a>
+
+        <a class="logout" href="index.html">تسجيل الخروج ↩</a>
+    </aside>
+
+</div>
+
+<footer>
+    SPORTS ZONE © 2026 — صحتك تبدأ بخطوة
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+if (name) {
+    document.getElementById("visitor").textContent = name;
+}
+</script>
+
+</body>
+</html>
+
+
